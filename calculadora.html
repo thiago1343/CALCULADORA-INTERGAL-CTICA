@@ -10,11 +10,11 @@
 <body>
     <div class="fundo">
         <div class="calculadora">
-        <h1>Calculadora INTERGALÁTIC</h1>
+        <h1>INTERGALÁTIC</h1>
         <p id="resultado"></p>
         <table>
             <tr>
-                <td><button class="botao" onclick="insert('X')">C</button></td>
+                <td><button class="botao" onclick="clean()">C</button></td>
                 <td><button class="botao" onclick="insert('X')">-</button></td>   
                 <td><button class="botao">/</button></td>
                 <td><button class="botao">X</button></td>
@@ -23,13 +23,13 @@
                 <td><button class="botao" onclick="insert('7')">7</button></td>
                 <td><button class="botao" onclick="insert('8')">8</button></td>
                 <td><button class="botao" onclick="insert('9')">9</button></td>
-                <td><button class="botao">-</button></td>
+                <td><button class="botao" onclick="insert('-')">-</button></td>
             </tr>
             <tr>
                 <td><button class="botao" onclick="insert('4')">4</button></td>
                 <td><button class="botao" onclick="insert('5')">5</button></td>
                 <td><button class="botao" onclick="insert('6')">6</button></td>
-                <td><button class="botao">+</button></td>
+                <td><button class="botao" onclick="insert('+')">+</button></td>
             </tr>
             <tr>
                 <td><button class="botao" onclick="insert('1')">1</button></td>
@@ -49,6 +49,10 @@
         {
            var numero = document.getElementById('resultado').innerHTML;
            document.getElementById('resultado').innerHTML = numero + num;
+        }
+        function clean()
+        {
+            document.getElementById('resultado').innerHTML = "";
         }
     </script>
     
